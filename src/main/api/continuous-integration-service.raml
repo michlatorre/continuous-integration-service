@@ -1,0 +1,38 @@
+#%RAML 0.8
+title: Continuous Integration Service
+version: v1
+baseUri: http://continuous-integration-service.api
+/projects:
+  get:
+    description: Gets a list of all the projects
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+               {
+                 "id" : 1,
+                 "artifactId" : "test-project",
+                 "description" : "This is just a test project",
+                 "githubUrl" : "https://github.com/WhiteSky-Labs/test-project",
+                  "jenkinsUrl" : "http://jenkins.devops.whiteskylabs.org/job/test-project/",
+                   "sonarqubeUrl" : "http://sonar.devops.whiteskylabs.org/dashboard/index/1"
+               },
+               {
+                   "id" : 2,
+                   "artifactId" : "test-artifact",
+                   "description" : "Artifact, this is a new artifact",
+                   "githubUrl" : "https://github.com/WhiteSky-Labs/test-artifact",
+                   "jenkinsUrl" : "http://jenkins.devops.whiteskylabs.org/job/test-artifact/",
+                   "sonarqubeUrl" : "http://sonar.devops.whiteskylabs.org/dashboard/index/2"
+               },
+               {
+                   "id" : 3,
+                   "artifactId" : "test-mike",
+                   "description" : "Test mike, one two one two, test mike, one two",
+                   "githubUrl" : "https://github.com/WhiteSky-Labs/test-mike",
+                   "jenkinsUrl" : "http://jenkins.devops.whiteskylabs.org/job/test-mike/",
+                   "sonarqubeUrl" : "http://sonar.devops.whiteskylabs.org/dashboard/index/3"
+               }
+              ]
