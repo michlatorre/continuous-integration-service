@@ -1,0 +1,18 @@
+ - projects: |  
+    {
+      "$schema": "http://json-schema.org/draft-03/schema",
+      "type": "array",
+      "items": 
+        {
+          "type": "object",
+          "properties": 
+          {
+           "id": { "type": "integer" },
+           "artifact_id": { "type": "string" },
+           "description": { "type": "string" },
+           "github_url": { "type": "string" },
+           "jenkins_url": { "type": "string" },
+           "sonarqube_url": { "type": "string"}
+          }
+        }
+    }
